@@ -10,6 +10,8 @@ const URL = require("url");
 
 const { unlink } = require("fs/promises");
 
+app.use(helmet());
+
 const downloadFile = async (url, path) => {
   const res = await fetch(url);
   const fileStream = fs.createWriteStream(path);
