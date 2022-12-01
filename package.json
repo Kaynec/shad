@@ -1,0 +1,22 @@
+{
+  "name": "shad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.17.1",
+    "inquirer": "^8.0.0",
+    "node-fetch": "^2.3.0",
+    "node-telegram-bot-api": "^0.60.0",
+    "nodemon": "^2.0.20",
+    "puppeteer": "^19.3.0",
+    "uuid": "^9.0.0"
+  }
+}
