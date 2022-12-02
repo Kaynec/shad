@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.port || 4000;
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const bodyParser = require("body-parser");
@@ -42,10 +42,6 @@ app.post("/", async (req, res) => {
   const token = req.body.token;
   const fileLink = req.body.link;
 
-  //
-
-  // const lastThree = fileLink.substr(fileLink.length - 3);
-
   const parsed = URL.parse(fileLink);
 
   const pathname = "media" + path.basename(parsed.pathname);
@@ -57,7 +53,7 @@ app.post("/", async (req, res) => {
   }
 
   const url = "http://web.shad.ir";
-  let launchOptions = { headless: false, args: ["--start-maximized"] };
+  let launchOptions = { headless: true, args: ["--start-maximized"] };
 
   const browser = await puppeteer.launch(launchOptions);
   const page = await browser.newPage();

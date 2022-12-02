@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./app.js",
-    "prod": "pm2 start app.js"
+    "prod": "pm2 start app.js",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "keywords": [],
   "author": "",
