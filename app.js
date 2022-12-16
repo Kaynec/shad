@@ -53,7 +53,10 @@ app.post("/", async (req, res) => {
   }
 
   const url = "http://web.shad.ir";
-  let launchOptions = { headless: true, args: ["--start-maximized"] };
+  let launchOptions = {
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  };
 
   const browser = await puppeteer.launch(launchOptions);
 
