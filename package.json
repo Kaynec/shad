@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./app.js",
-    "prod": "pm2 start app.js",
     "start": "node app.js"
   },
   "engines": {
@@ -21,6 +20,7 @@
     "node-fetch": "^2.3.0",
     "nodemon": "^2.0.20",
     "pm2": "^5.2.2",
-    "puppeteer": "^19.3.0"
+    "puppeteer": "^19.3.0",
+    "puppeteer-core": "^19.3.0"
   }
 }

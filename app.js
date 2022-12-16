@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const bodyParser = require("body-parser");
@@ -53,10 +53,10 @@ app.post("/", async (req, res) => {
   }
 
   const url = "http://web.shad.ir";
+  let launchOptions = { headless: true, args: ["--start-maximized"] };
 
-  const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+  const browser = await puppeteer.launch(launchOptions);
+
   const page = await browser.newPage();
 
   // set viewport and user agent (just in case for nice viewing)
